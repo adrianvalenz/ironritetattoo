@@ -1,0 +1,8 @@
+<section class="grid grid-cols-1 md:grid-cols-2 gap-4 py-8">
+  <aside>
+    <%= render Shared::Shopbutton.new(metadata: site.metadata, resource: resource, shop: site.metadata.north) %>
+  </aside>
+  <aside>
+    <%= render Shared::Shopbutton.new(metadata: site.metadata, resource: resource, shop: site.metadata.south) %>
+  </aside>
+</section>

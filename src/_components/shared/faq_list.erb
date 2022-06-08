@@ -1,0 +1,32 @@
+<div x-data="{ active: 1 }" class="container mx-auto px-2">
+  <% @faqs.each do |f| %>
+    <div x-data="{
+        id: <%= f.id %>,
+        get expanded() {
+            return this.active === this.id
+        },
+        set expanded(value) {
+            this.active = value ? this.id : null
+        },
+      }" role="region">
+      <div class="border-b border-bone">
+        <h2>
+            <button
+                x-on:click="expanded = !expanded"
+                :aria-expanded="expanded"
+                class="text-4xl pt-4 mb-4 pb-4 flex items-center justify-between w-full"
+            >
+            <span><%= f.q %></span>
+                <span x-show="expanded" aria-hidden="true" class="ml-4"><img src="<%= relative_url '/images/icons/arrow-down.svg' %>"/></span>
+                <span x-show="!expanded" aria-hidden="true" class="ml-4"><img src="<%= relative_url '/images/icons/arrow-up.svg' %>" /></span>
+            </button>
+        </h2>
+
+        <div x-show="expanded" x-collapse>
+          <div class="pb-4 mb-4"><%= f.a %></div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+

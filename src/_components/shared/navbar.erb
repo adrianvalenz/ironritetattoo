@@ -1,0 +1,93 @@
+<div class="container mx-auto px-2">
+  <header class="grid grid-cols-3 gap-4 py-6 px-4 md:px-0 md:py-16 border-b border-bone">
+    <section class="flex items-center space-x-8 col-span-2">
+      <div>
+        <a href="<%= relative_url '/' %>"><img src="<%= relative_url '/images/irt/logo-mark.svg' %>" alt="Logo" /></a>
+      </div>
+
+      <nav class="hidden md:block space-x-4 text-base">
+        <a href="<%= relative_url '/' %>">Home</a>
+        <a href="<%= @metadata.links.facebook %>">Facebook</a>
+        <button href="#">
+          Instagram
+          <nav class="hidden">
+            <a href="<%= relative_url '/faq' %>">FAQs</a>
+            <a href="<%= relative_url '/faq' %>">FAQs</a>
+          </nav>
+        </button>
+        <a href="<%= @metadata.links.youtube %>">YouTube</a>
+        <a href="<%= relative_url '/faq' %>">FAQs</a>
+        <a href="<%= @metadata.links.merch %>">Store</a>
+        <a href="<%= relative_url '/contact' %>">Contact</a>
+      </nav>
+    </section>
+
+    <section class="hidden md:col-span-1 md:flex md:justify-end">
+      <a href="<%= relative_url '/contact' %>" class="inline-block border border-old-gold hover:bg-maxx-black hover:text-white px-8 py-4">
+        Contact Us
+      </a>
+    </section>
+
+    <!-- mobile menu -->
+    <div class="col-span-1 md:hidden flex items-center justify-end">
+        <div
+            x-data="{
+                open: false,
+                toggle() {
+                    if (this.open) {
+                        return this.close()
+                    }
+
+                    this.$refs.button.focus()
+
+                    this.open = true
+                },
+                close(focusAfter) {
+                    if (! this.open) return
+
+                    this.open = false
+
+                    focusAfter && focusAfter.focus()
+                }
+            }"
+            x-on:keydown.escape.prevent.stop="close($refs.button)"
+            x-on:focusin.window="! $refs.panel.contains($event.target) && close()"
+            x-id="['dropdown-button']"
+            class="relative"
+        >
+            <!-- Button -->
+            <button
+                x-ref="button"
+                x-on:click="toggle()"
+                :aria-expanded="open"
+                :aria-controls="$id('dropdown-button')"
+                type="button"
+                class="px-4 py-2"
+            >
+                <span>Menu</span>
+            </button>
+
+            <!-- Panel -->
+            <div
+                x-ref="panel"
+                x-show="open"
+                x-transition.origin.top.left
+                x-on:click.outside="close($refs.button)"
+                :id="$id('dropdown-button')"
+                style="display: none;"
+                class="fixed left-0 right-0 mt-8 w-full bg-maxx-black text-white overflow-hidden"
+            >
+              <nav class="grid px-4">
+                <a class="py-2 border-b border-old-gold" href="<%= relative_url '/' %>">Home</a>
+                <a class="py-2 border-b border-old-gold" href="<%= @metadata.links.facebook %>">Facebook</a>
+                <a class="py-2 border-b border-old-gold" href="<%= @metadata.links.youtube %>">YouTube</a>
+                <a class="py-2 border-b border-old-gold" href="<%= relative_url '/faq' %>">FAQs</a>
+                <a class="py-2 border-b border-old-gold" href="<%= @metadata.links.merch %>">Store</a>
+                <a class="py-2" href="<%= relative_url '/contact' %>">Contact</a>
+              </nav>
+            </div>
+        </div>
+        <!-- end mobile menu -->
+    </div>
+  </header>
+</div>
