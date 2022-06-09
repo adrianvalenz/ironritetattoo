@@ -3,7 +3,7 @@
   <head>
     <%= render "head", metadata: site.metadata, title: resource.data.title %>
   </head>
-  <body class="font-serif bg-flesh text-maxx-black <%= resource.data.layout %> <%= resource.data.page_class %>">
+  <body class="font-serif antialiased bg-flesh text-maxx-black <%= resource.data.layout %> <%= resource.data.page_class %>">
     <div>
       <%= render Shared::Navbar.new(metadata: site.metadata, resource: resource) %>
 

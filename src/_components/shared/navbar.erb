@@ -1,4 +1,4 @@
-<div class="container mx-auto px-2">
+<div class="max-w-6xl mx-auto px-2">
   <header class="grid grid-cols-3 gap-4 py-6 px-4 md:px-0 md:py-16 border-b border-bone">
     <section class="flex items-center space-x-8 col-span-2">
       <div>
@@ -75,15 +75,18 @@
                 x-on:click.outside="close($refs.button)"
                 :id="$id('dropdown-button')"
                 style="display: none;"
-                class="fixed left-0 right-0 mt-8 w-full bg-maxx-black text-white overflow-hidden"
+                class="absolute -right-6 mt-8 w-screen bg-maxx-black text-white"
             >
-              <nav class="grid px-4">
-                <a class="py-2 border-b border-old-gold" href="<%= relative_url '/' %>">Home</a>
-                <a class="py-2 border-b border-old-gold" href="<%= @metadata.links.facebook %>">Facebook</a>
-                <a class="py-2 border-b border-old-gold" href="<%= @metadata.links.youtube %>">YouTube</a>
-                <a class="py-2 border-b border-old-gold" href="<%= relative_url '/faq' %>">FAQs</a>
-                <a class="py-2 border-b border-old-gold" href="<%= @metadata.links.merch %>">Store</a>
-                <a class="py-2" href="<%= relative_url '/contact' %>">Contact</a>
+              <ul class="grid">
+                <li class="hover:bg-old-gold"><a class="inline-block w-full px-4" href="<%= relative_url '/' %>"><span class="border-b border-old-gold inline-block w-full px-2 py-4">Home</span></a></li>
+                <li class="hover:bg-old-gold"><a class="inline-block w-full px-4" href="<%= @metadata.links.facebook %>"><span class="border-b border-old-gold inline-block w-full px-2 py-4">Facebook</span></a></li>
+                <li class="hover:bg-old-gold"><a class="inline-block w-full px-4" href="<%= @metadata.links.youtube %>"><span class="border-b border-old-gold inline-block w-full px-2 py-4">YouTube</span></a></li>
+                <li class="hover:bg-old-gold"><a class="inline-block w-full px-4" href="<%= relative_url '/faq' %>"><span class="border-b border-old-gold inline-block w-full px-2 py-4">FAQs</span></a></li>
+                <li class="hover:bg-old-gold"><a class="inline-block w-full px-4" href="<%= @metadata.links.merch %>"><span class="border-b border-old-gold inline-block w-full px-2 py-4">Store</span></a></li>
+                <li class="hover:bg-old-gold"><a class="inline-block w-full px-4" href="<%= relative_url '/contact' %>"><span class="border-0 inline-block w-full px-2 py-4">Contact</span></a></li>
+              </ul>
+              <nav class="p-4">
+                <a class="border border-old-gold p-4 text-center block w-full" href="<%= relative_url '/contact' %>">Contact Us</a>
               </nav>
             </div>
         </div>
