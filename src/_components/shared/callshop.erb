@@ -1,11 +1,11 @@
 <div class="bg-maxx-black text-white py-48">
   <section class="max-w-6xl mx-auto px-2">
     <div class="grid grid-cols-1 space-y-8">
-      <aside class="flex justify-center items-center text-center text-2xl">
+      <aside class="flex justify-center items-center text-center text-xl md:text-2xl">
         Call us to schedule an in-person consultation
       </aside>
       <aside class="flex justify-center items-center text-center">
-        <a href="callto:+<%= @shop.number_link %>" style="font-size: 160px;"><%= @shop.number %></a>
+        <a href="callto:+<%= @shop.number_link %>" class="text-6xl md:text-9xl"><%= @shop.number %></a>
       </aside>
     </div>
   </section>
