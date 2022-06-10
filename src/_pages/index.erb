@@ -4,17 +4,17 @@
 layout: home
 ---
 
-<div class="max-w-6xl mx-auto px-2">
+<div class="max-w-6xl mx-auto px-8">
   <%= render Shared::Herobanner.new(metadata: site.metadata, resource: resource) %>
   <%= render "shop_buttons" %>
 </div>
 
-<div class="max-w-6xl mx-auto px-2 py-4">
+<div class="max-w-6xl mx-auto px-8 py-4">
   <img src="<%= relative_url '/images/north-cover.png' %>" alt="home banner" />
 </div>
 
-<div class="max-w-6xl mx-auto px-2">
-  <h1 class="text-5xl mb-8 pt-16">Contact</h1>
+<div class="max-w-6xl mx-auto px-8">
+  <h1 class="text-5xl leading-normal mb-8 pt-16">Contact</h1>
 </div>
 
 <%= render Shared::ContactInfo.new(metadata: site.metadata, resource: resource) %>

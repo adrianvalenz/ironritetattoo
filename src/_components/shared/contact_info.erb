@@ -1,12 +1,12 @@
-<div class="max-w-6xl mx-auto px-2">
+<div class="max-w-6xl mx-auto px-8">
   <p class="pb-8">We always love to hear from our customers. So feel free to get in touch today to learn about what we have to offer</p>
 
-  <section class="grid grid-cols-2 gap-8">
+  <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
     <div>
       <h3 class="text-old-gold pb-4">North</h3>
-      <div class="text-4xl pb-4"><%= @metadata.north.address %></div>
-      <div class="text-4xl pb-8"><%= @metadata.north.street %></div>
-      <div class="text-4xl pb-16"><%= @metadata.north.number %></div>
+      <div class="text-2xl md:text-3xl leading-normal md:leading-normal pb-4"><%= @metadata.north.address %></div>
+      <div class="text-2xl md:text-3xl leading-normal md:leading-normal pb-8"><%= @metadata.north.street %></div>
+      <div class="text-2xl md:text-3xl leading-normal md:leading-normal pb-16"><%= @metadata.north.number %></div>
       <a href="<%= @metadata.north.location %>" class="border w-full inline-block text-center py-4 border-old-gold">
         Visit <%= @metadata.north.location.capitalize %>
       </a>
@@ -14,9 +14,9 @@
 
     <div>
       <h3 class="text-old-gold pb-4">South</h3>
-      <div class="text-4xl pb-4"><%= @metadata.south.address %></div>
-      <div class="text-4xl pb-8"><%= @metadata.south.street %></div>
-      <div class="text-4xl pb-16"><%= @metadata.south.number %></div>
+      <div class="text-2xl md:text-3xl leading-normal md:leading-normal pb-4"><%= @metadata.south.address %></div>
+      <div class="text-2xl md:text-3xl leading-normal md:leading-normal pb-8"><%= @metadata.south.street %></div>
+      <div class="text-2xl md:text-3xl leading-normal md:leading-normal pb-16"><%= @metadata.south.number %></div>
       <a href="<%= @metadata.south.location %>" class="border w-full inline-block text-center py-4 border-old-gold">
         Visit <%= @metadata.south.location.capitalize %>
       </a>

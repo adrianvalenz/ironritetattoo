@@ -1,13 +1,13 @@
-<div class="max-w-6xl mx-auto px-2">
-  <div class="grid grid-cols-5 gap-4">
-    <section class="col-span-2">
-      <h3 class="text-5xl mb-8">Contact</h3>
+<div class="max-w-6xl mx-auto px-8">
+  <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+    <section class="md:col-span-2">
+      <h3 class="text-2xl md:text-5xl mb-8">Contact</h3>
     </section>
 
-    <section class="col-span-3">
+    <section class="md:col-span-3">
       <p class="pb-4 mb-4">We always love to hear from our customers. So feel free to get in touch today to learn more about what we have to offer</p>
 
-      <div class="text-4xl pb-4 flex justify-between">
+      <div class="text-2xl md:text-3xl pb-4 flex justify-between">
         <div>
           <div class="pb-4"><%= @shop.address %></div>
           <div class="pb-8"><%= @shop.street %></div>
@@ -15,8 +15,8 @@
         <img src="<%= relative_url '/images/icons/location-map.svg' %>" alt="location-icon" />
       </div>
 
-      <div class="text-4xl pb-8"><%= @metadata.email %></div>
-      <div class="text-4xl pb-8"><%= @shop.phone %></div>
+      <div class="text-2xl md:text-3xl pb-8"><%= @metadata.email %></div>
+      <div class="text-2xl md:text-3xl pb-8"><%= @shop.phone %></div>
     </section>
   </div>
 </div>
