@@ -8,13 +8,29 @@
       <nav class="hidden md:block space-x-4 text-base">
         <a href="<%= relative_url '/' %>">Home</a>
         <a href="<%= @metadata.links.facebook %>">Facebook</a>
-        <button href="#">
-          Instagram
-          <nav class="hidden">
-            <a href="<%= relative_url '/faq' %>">FAQs</a>
-            <a href="<%= relative_url '/faq' %>">FAQs</a>
-          </nav>
-        </button>
+        
+        <div x-data="{ open: false }" @mouseleave="open = false" class="inline-block relative">
+            <!-- Dropdown toggle button -->
+            <button @mouseover="open = true" class="py-2">
+                <span>Instagram</span>
+            </button>
+
+            <!-- Dropdown menu -->
+            <div x-show="open"
+            x-transition:enter.duration.500ms
+            x-transition:leave.duration.800ms
+            class="absolute left-0 w-48 p-4 mt-0 bg-maxx-black text-bone shadow-xl">
+                <a href="<%= @metadata.links.ig_north %>"
+                    class="block px-4 py-2 text-base text-bone hover:bg-old-gold hover:text-bone">
+                    North
+                </a>
+                <a href="<%= @metadata.links.ig_south %>"
+                    class="block px-4 py-2 text-base text-bone hover:bg-old-gold hover:text-bone">
+                    South
+                </a>
+            </div>
+        </div>
+        
         <a href="<%= @metadata.links.youtube %>">YouTube</a>
         <a href="<%= relative_url '/faq' %>">FAQs</a>
         <a href="<%= @metadata.links.merch %>">Store</a>
@@ -79,6 +95,15 @@
               <ul class="grid">
                 <li class="hover:bg-old-gold"><a class="inline-block w-full px-4" href="<%= relative_url '/' %>"><span class="border-b border-old-gold inline-block w-full px-2 py-4">Home</span></a></li>
                 <li class="hover:bg-old-gold"><a class="inline-block w-full px-4" href="<%= @metadata.links.facebook %>"><span class="border-b border-old-gold inline-block w-full px-2 py-4">Facebook</span></a></li>
+                <div x-data="{ open: false }">
+                  <button x-on:click="open = ! open" class="inline-block w-full">
+                    <li class="hover:bg-old-gold"><a class="inline-block w-full px-4" href="#"><span class="text-left border-b border-old-gold inline-block w-full px-2 py-4">Instagram</span></a></li>
+                  </button>
+                  <div x-show="open">
+                    <li class="hover:bg-old-gold"><a class="inline-block w-full px-4" href="<%= @metadata.links.ig_north %>"><span class="border-b border-old-gold inline-block w-full px-2 py-4">IG North</span></a></li>
+                    <li class="hover:bg-old-gold"><a class="inline-block w-full px-4" href="<%= @metadata.links.ig_south %>"><span class="border-b border-old-gold inline-block w-full px-2 py-4">IG South</span></a></li>
+                  </div>
+                </div>
                 <li class="hover:bg-old-gold"><a class="inline-block w-full px-4" href="<%= @metadata.links.youtube %>"><span class="border-b border-old-gold inline-block w-full px-2 py-4">YouTube</span></a></li>
                 <li class="hover:bg-old-gold"><a class="inline-block w-full px-4" href="<%= relative_url '/faq' %>"><span class="border-b border-old-gold inline-block w-full px-2 py-4">FAQs</span></a></li>
                 <li class="hover:bg-old-gold"><a class="inline-block w-full px-4" href="<%= @metadata.links.merch %>"><span class="border-b border-old-gold inline-block w-full px-2 py-4">Store</span></a></li>
