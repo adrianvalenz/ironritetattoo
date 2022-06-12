@@ -12,6 +12,7 @@ description: >-
 
 north:
   location: north
+  map_link: "https://goo.gl/maps/b67h7eYEKXyZy2wRA"
   address: "1113 W. Veterans Memorial Blvd. A"
   street: "Killeen, TX 76541"
   number: "254.883.5304"
@@ -28,6 +29,7 @@ north:
 
 south:
   location: south
+  map_link: "https://goo.gl/maps/eLXXkgR5YEXViJxC6"
   address: "40120 Industrial Park Circle"
   street: "Georgetown, TX 78626"
   number: "737.738.1852"
@@ -44,7 +46,7 @@ south:
 
 faqs:
   - id: 1
-    q: "How do you have to be to get tattooed?"
+    q: "How old do you have to be to get tattooed?"
     a: "18 years of age. Must have valid photo ID. We cannot accept paper or temporary cards."
   - id: 2
     q: "How much does it cost?"

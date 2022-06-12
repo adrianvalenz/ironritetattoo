@@ -8,7 +8,7 @@
         <a href="callto:+<%= @shop.number_link %>">
           <img class="w-24 md:w-8" src="<%= relative_url '/images/icons/phone.svg' %>" alt="phone icon" />
         </a>
-        <a href="/">
+        <a href="<%= @shop.map_link %>">
           <img class="w-24 md:w-8" src="<%= relative_url '/images/icons/map-pin.svg' %>" alt="map-pin icon" />
         </a>
       <% end %>

@@ -97,11 +97,11 @@
                 <li class="hover:bg-old-gold"><a class="inline-block w-full px-4" href="<%= @metadata.links.facebook %>"><span class="border-b border-old-gold inline-block w-full px-2 py-4">Facebook</span></a></li>
                 <div x-data="{ open: false }">
                   <button x-on:click="open = ! open" class="inline-block w-full">
-                    <li class="hover:bg-old-gold"><a class="inline-block w-full px-4" href="#"><span class="text-left border-b border-old-gold inline-block w-full px-2 py-4">Instagram</span></a></li>
+                    <li class="hover:bg-old-gold"><a class="inline-block w-full px-4 focus:bg-old-gold" href="#"><span class="text-left border-b border-old-gold inline-block w-full px-2 py-4">Instagram</span></a></li>
                   </button>
                   <div x-show="open">
-                    <li class="hover:bg-old-gold"><a class="inline-block w-full px-4" href="<%= @metadata.links.ig_north %>"><span class="border-b border-old-gold inline-block w-full px-2 py-4">IG North</span></a></li>
-                    <li class="hover:bg-old-gold"><a class="inline-block w-full px-4" href="<%= @metadata.links.ig_south %>"><span class="border-b border-old-gold inline-block w-full px-2 py-4">IG South</span></a></li>
+                    <li class="hover:bg-old-gold"><a class="inline-block w-full px-4 focus:bg-dark-ochre hover:bg-dark-ochre" href="<%= @metadata.links.ig_north %>"><span class="border-b border-old-gold inline-block w-full px-6 py-4">IG North</span></a></li>
+                    <li class="hover:bg-old-gold"><a class="inline-block w-full px-4 focus:bg-dark-ochre hover:bg-dark-ochre" href="<%= @metadata.links.ig_south %>"><span class="border-b border-old-gold inline-block w-full px-6 py-4">IG South</span></a></li>
                   </div>
                 </div>
                 <li class="hover:bg-old-gold"><a class="inline-block w-full px-4" href="<%= @metadata.links.youtube %>"><span class="border-b border-old-gold inline-block w-full px-2 py-4">YouTube</span></a></li>
