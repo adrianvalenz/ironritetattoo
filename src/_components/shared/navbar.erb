@@ -1,11 +1,11 @@
 <div class="max-w-6xl mx-auto px-8">
-  <header class="grid grid-cols-3 gap-4 py-6 px-4 md:px-0 md:py-16 border-b border-bone">
+  <header class="grid grid-cols-3 gap-4 py-6 px-4 lg:px-0 lg:py-16 border-b border-bone">
     <section class="flex items-center space-x-8 col-span-2">
       <div>
         <a href="<%= relative_url '/' %>"><img src="<%= relative_url '/images/irt/logo-mark.svg' %>" alt="Logo" /></a>
       </div>
 
-      <nav class="hidden md:block space-x-4 text-base">
+      <nav class="hidden lg:block space-x-4 text-base">
         <a href="<%= relative_url '/' %>">Home</a>
         <a href="<%= @metadata.links.facebook %>">Facebook</a>
         
@@ -32,19 +32,20 @@
         </div>
         
         <a href="<%= @metadata.links.youtube %>">YouTube</a>
+        <a href="<%= relative_url '/' %>">TikTok</a>
         <a href="<%= relative_url '/faq' %>">FAQs</a>
         <a href="<%= @metadata.links.merch %>">Store</a>
       </nav>
     </section>
 
-    <section class="hidden md:col-span-1 md:flex md:justify-end">
+    <section class="hidden lg:col-span-1 lg:flex lg:justify-end">
       <a href="<%= relative_url '/contact' %>" class="inline-block border border-old-gold hover:bg-maxx-black hover:text-white px-8 py-4">
-        Contact Us
+        Request an appointment
       </a>
     </section>
 
     <!-- mobile menu -->
-    <div class="col-span-1 md:hidden flex items-center justify-end">
+    <div class="col-span-1 lg:hidden flex items-center justify-end">
         <div
             x-data="{
                 open: false,
@@ -105,12 +106,13 @@
                   </div>
                 </div>
                 <li class="hover:bg-old-gold"><a class="inline-block w-full px-4" href="<%= @metadata.links.youtube %>"><span class="border-b border-old-gold inline-block w-full px-2 py-4">YouTube</span></a></li>
+                <li class="hover:bg-old-gold"><a class="inline-block w-full px-4" href="<%= relative_url '/' %>"><span class="border-b border-old-gold inline-block w-full px-2 py-4">TikTok</span></a></li>
                 <li class="hover:bg-old-gold"><a class="inline-block w-full px-4" href="<%= relative_url '/faq' %>"><span class="border-b border-old-gold inline-block w-full px-2 py-4">FAQs</span></a></li>
                 <li class="hover:bg-old-gold"><a class="inline-block w-full px-4" href="<%= @metadata.links.merch %>"><span class="border-b border-old-gold inline-block w-full px-2 py-4">Store</span></a></li>
                 <li class="hover:bg-old-gold"><a class="inline-block w-full px-4" href="<%= relative_url '/contact' %>"><span class="border-0 inline-block w-full px-2 py-4">Contact</span></a></li>
               </ul>
               <nav class="p-4">
-                <a class="border border-old-gold p-4 text-center block w-full" href="<%= relative_url '/contact' %>">Contact Us</a>
+                <a class="border border-old-gold p-4 text-center block w-full" href="<%= relative_url '/contact' %>">Request an appointment</a>
               </nav>
             </div>
         </div>
