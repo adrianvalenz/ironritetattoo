@@ -6,7 +6,7 @@ shop_location: south
 
 <div class="max-w-6xl mx-auto px-8">
   <div class="pb-8 pt-12">
-    <%= render Shared::Shop::Icons.new(shop: site.metadata.south) %>
+    <%= render Shared::Shop::Icons.new(shop: site.metadata.south, links: site.metadata.links) %>
   </div>
 
   <%= render Shared::FontDisplay.new(text: "Photo Gallery") %>
@@ -25,5 +25,5 @@ shop_location: south
 
 
 <div class="max-w-6xl mx-auto px-8 py-8 md:py-16">
-  <%= render Shared::Shop::Icons.new(shop: site.metadata.south, icons: true) %>
+  <%= render Shared::Shop::Icons.new(shop: site.metadata.south, links: site.metadata.links, icons: true) %>
 </div>

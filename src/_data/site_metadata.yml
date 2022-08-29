@@ -5,10 +5,10 @@
 # in the templates via {{ site.metadata.myvariable }}.
 
 title: Iron Rite Tattoo
-tagline: This site is totally awesome
+tagline: Please walk-in and visit the shop for same day availability and schedule appointments with the artist that fits your needs.
 email: info@ironritetattoo.com
 description: >-
-  Write an awesome description for your new site here. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+  Iron Rite Tattoo is Central Texas' finest tattoo parlor, proudly serving our nation's military. Two locations, in Killeen and Georgetown, TX.
 
 north:
   handle: "ironritetattoo"
@@ -20,6 +20,9 @@ north:
   number: "254.883.5304"
   phone: "(254) 833-5304"
   number_link: "12548835304"
+  links: 
+    ig: "https://instagram.com/ironritetattoo"
+    tiktok: "https://www.tiktok.com/@joshsnydertattoos"
   hours:
     sunday: "2-9pm"
     monday: "2-9pm"
@@ -39,6 +42,9 @@ south:
   number: "737.738.1852"
   phone: "(737) 738-1852"
   number_link: "17377381852"
+  links:
+    ig: "https://instagram.com/ironritetattoosouth"
+    tiktok: "https://www.tiktok.com/@ironritetattoosouth"
   hours:
     sunday: "2-9pm"
     monday: "2-9pm"
