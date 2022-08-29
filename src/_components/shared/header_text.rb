@@ -1,4 +1,4 @@
-class Shared::FontDisplay < Bridgetown::Component
+class Shared::HeaderText < Bridgetown::Component
   def initialize(text:, styles: nil)
     @text, @styles = text, styles
   end

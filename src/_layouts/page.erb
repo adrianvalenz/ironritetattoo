@@ -2,4 +2,8 @@
 layout: default
 ---
 
-<%= yield %>
+<div class="max-w-6xl mx-auto px-8">
+  <%= render Shared::Navbar.new(metadata: site.metadata, resource: resource) %>
+  <%= yield %>
+  <%= render Shared::Copyright.new(metadata: site.metadata, resource: resource) %>
+</div>

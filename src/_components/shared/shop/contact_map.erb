@@ -1,0 +1,20 @@
+<div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+  <section class="md:col-span-2">
+    <h3 class="text-2xl md:text-5xl mb-8">Contact</h3>
+  </section>
+
+  <section class="md:col-span-3">
+    <p class="pb-4 mb-4">We always love to hear from our customers. So feel free to get in touch today to learn more about what we have to offer</p>
+
+    <div class="text-2xl md:text-3xl pb-4 flex justify-between">
+      <div>
+        <div class="pb-4"><%= @shop.address %></div>
+        <div class="pb-8"><%= @shop.street %></div>
+      </div>
+      <a href="<%= @shop.map_link %>"><img src="<%= relative_url '/images/icons/location-map.svg' %>" alt="location-icon" /></a>
+    </div>
+
+    <div class="text-2xl md:text-3xl pb-8"><%= @metadata.email %></div>
+    <div class="text-2xl md:text-3xl pb-8"><a href="callto:+<%= @shop.number_link %>"><%= @shop.phone %></a></div>
+  </section>
+</div>

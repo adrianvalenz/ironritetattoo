@@ -2,5 +2,13 @@
 layout: default
 ---
 
-<%= render Shared::Navbar.new(metadata: site.metadata, resource: resource) %>
+<div class="max-w-6xl mx-auto px-8">
+  <%= render Shared::Navbar.new(metadata: site.metadata, resource: resource) %>
+  <h3 class="uppercase text-center text-old-gold tracking-[10px] text-base py-4"><%= resource.data.city_state %></h3>
+  <div class="py-8">
+    <%= render Shared::HeaderText.new(text: site.metadata.we_are) %>
+  </div>
+</div>
 <%= yield %>
+
+

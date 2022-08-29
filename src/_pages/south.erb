@@ -1,0 +1,29 @@
+---
+layout: shop
+city_state: Georgetown, TX
+shop_location: south
+---
+
+<div class="max-w-6xl mx-auto px-8">
+  <div class="pb-8 pt-12">
+    <%= render Shared::Shop::Icons.new(shop: site.metadata.south) %>
+  </div>
+
+  <%= render Shared::FontDisplay.new(text: "Photo Gallery") %>
+  <%= render Shared::Shop::PhotoGallery.new(ig_link: site.metadata.links.ig_south, shop: site.metadata.south) %>
+</div>
+
+<%= render Shared::Shop::PhoneNumberBanner.new(shop: site.metadata.south) %>
+
+<div class="max-w-6xl mx-auto px-8 py-16">
+  <%= render Shared::Shop::Hours.new(shop: site.metadata.south) %>
+</div>
+
+<div class="max-w-6xl mx-auto px-8">
+  <%= render Shared::Shop::ContactMap.new(metadata: site.metadata, shop: site.metadata.south) %>
+</div>
+
+
+<div class="max-w-6xl mx-auto px-8 py-8 md:py-16">
+  <%= render Shared::Shop::Icons.new(shop: site.metadata.south, icons: true) %>
+</div>
