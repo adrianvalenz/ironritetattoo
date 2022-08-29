@@ -32,7 +32,7 @@
       
       <a href="<%= @metadata.links.youtube %>">YouTube</a>
       <a href="<%= relative_url '/' %>">TikTok</a>
-      <a href="<%= relative_url '/faqs' %>">FAQs</a>
+      <a href="<%= relative_url '/faq' %>">FAQs</a>
       <a href="<%= @metadata.links.merch %>">Store</a>
     </nav>
   </section>
@@ -69,6 +69,9 @@
           x-id="['dropdown-button']"
           class="relative"
       >
+          <!-- Panel Overlay -->
+          <div x-show="open" class="fixed z-10 top-0 left-0 bottom-0 w-full bg-maxx-black opacity-50"><!-- overlay -->
+          </div><!-- overlay -->
           <!-- Button -->
           <button
               x-ref="button"
@@ -76,21 +79,26 @@
               :aria-expanded="open"
               :aria-controls="$id('dropdown-button')"
               type="button"
-              class="py-2"
-          >
-              <span>Menu</span>
+              class="py-2 relative z-20"
+              >
+              <template x-if="!open">
+                <span>Menu</span>
+              </template>
+              <template x-if="open">
+                <span>Close</span>
+              </template>
           </button>
 
           <!-- Panel -->
+          <!-- x-on:click.outside="close($refs.button)" -->
           <div
               x-ref="panel"
               x-show="open"
               x-transition.origin.top.left
-              x-on:click.outside="close($refs.button)"
               :id="$id('dropdown-button')"
               style="display: none;"
-              class="absolute -right-12 mt-8 w-screen bg-maxx-black text-white"
-          >
+              class="absolute z-40 -right-12 mt-8 w-screen bg-maxx-black text-white"
+              >
             <ul class="grid">
               <li class="hover:bg-old-gold"><a class="inline-block w-full px-4" href="<%= relative_url '/' %>"><span class="border-b border-old-gold inline-block w-full px-2 py-4">Home</span></a></li>
               <li class="hover:bg-old-gold"><a class="inline-block w-full px-4" href="<%= @metadata.links.facebook %>"><span class="border-b border-old-gold inline-block w-full px-2 py-4">Facebook</span></a></li>
@@ -108,13 +116,15 @@
               <li class="hover:bg-old-gold"><a class="inline-block w-full px-4" href="<%= relative_url '/faq' %>"><span class="border-b border-old-gold inline-block w-full px-2 py-4">FAQs</span></a></li>
               <li class="hover:bg-old-gold"><a class="inline-block w-full px-4" href="<%= @metadata.links.merch %>"><span class="border-b border-old-gold inline-block w-full px-2 py-4">Store</span></a></li>
             </ul>
+
             <nav class="p-4">
               <a class="border border-old-gold p-4 text-center block w-full" href="<%= relative_url '/contact' %>">Call Us</a>
             </nav>
             <nav class="p-4">
               <a class="border border-old-gold p-4 text-center block w-full" href="<%= relative_url '/contact' %>">Find Us</a>
             </nav>
-          </div>
+          </div><!-- x-ref="panel" -->
+
       </div>
       <!-- end mobile menu -->
   </div>
