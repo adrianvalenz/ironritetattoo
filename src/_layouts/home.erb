@@ -1,0 +1,11 @@
+---
+layout: default
+---
+
+<div class="flex justify-center items-center py-20">
+  <%= render Shared::IrtLogo.new(metadata: site.metadata, resource: resource) %>
+</div>
+<%= yield %>
+<%= render Shared::FontDisplay.new(text: "FAQs") %>
+<%= render Shared::Faq.new(metadata: site.metadata, resource: resource, faqs: site.metadata.faqs) %>
+<%= render Shared::Copyright.new(metadata: site.metadata, resource: resource) %>

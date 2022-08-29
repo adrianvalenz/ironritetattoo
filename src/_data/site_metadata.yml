@@ -1,0 +1,73 @@
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.metadata.title }}, {{ site.metadata.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.metadata.myvariable }}.
+
+title: Iron Rite Tattoo
+tagline: This site is totally awesome
+email: info@ironritetattoo.com
+description: >-
+  Write an awesome description for your new site here. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+
+north:
+  location: north
+  map_link: "https://goo.gl/maps/b67h7eYEKXyZy2wRA"
+  address: "1113 W. Veterans Memorial Blvd. A"
+  street: "Killeen, TX 76541"
+  number: "254.883.5304"
+  phone: "(254) 833-5304"
+  number_link: "12548835304"
+  hours:
+    sunday: "2-9pm"
+    monday: "2-9pm"
+    tuesday: "2-9pm"
+    wednesday: "2-9pm"
+    thursday: "2-9pm"
+    friday: "2-9pm"
+    saturday: "2-9pm"
+
+south:
+  location: south
+  map_link: "https://goo.gl/maps/eLXXkgR5YEXViJxC6"
+  address: "40120 Industrial Park Circle"
+  street: "Georgetown, TX 78626"
+  number: "737.738.1852"
+  phone: "(737) 738-1852"
+  number_link: "17377381852"
+  hours:
+    sunday: "2-9pm"
+    monday: "2-9pm"
+    tuesday: "2-9pm"
+    wednesday: "Closed"
+    thursday: "Closed"
+    friday: "2-9pm"
+    saturday: "2-9pm"
+
+faqs:
+  - id: 1
+    q: "How old do you have to be to get tattooed?"
+    a: "18 years of age. Must have valid photo ID. We cannot accept paper or temporary cards."
+  - id: 2
+    q: "How much does it cost?"
+    a: "Every artist's price range will be different depending on skills and experience. Come in today for a free consulation."
+  - id: 3
+    q: "Are the needles new?"
+    a: "Yes, the needles are brand new every time."
+  - id: 4
+    q: "Do you need an appointment to get tattooed?"
+    a: "We will take walk-ins whenever we can but appointments are recommended."
+  - id: 5
+    q: "How can I take care of my new tattoo?"
+    a: "Instructions will be given by your artist upon completing your tattoo."
+  - id: 6
+    q: "How do I set up an appointment?"
+    a: "To help you choose an artist you would like to book time with, we recommend looking through all the artist's portfolios. Each artist has their own unique style. By looking at everyone's work, you can then decide which artist best suits your needs."
+
+links:
+  facebook: "https://facebook.com/ironritetattoo"
+  ig_north: "https://instagram.com/ironritetattoo"
+  ig_south: "https://instagram.com/ironritetattoosouth"
+  youtube: "https://youtube.com/channel/UCMpg02LphjV3hEzaXKBJWMw/featured"
+  merch: "https://ironritetattoo.bigcartel.com"
+
