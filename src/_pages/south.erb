@@ -2,10 +2,20 @@
 layout: shop
 city_state: Georgetown, TX
 shop_location: south
+number: "17377381852"
+map_pin: "https://goo.gl/maps/eLXXkgR5YEXViJxC6"
+ig_link: "https://instagram.com/ironritetattoosouth"
+tiktok: "https://www.tiktok.com/@ironritetattoosouth"
+tiktok_link: "https://www.tiktok.com/@ironritetattoosouth"
 ---
 
-<div class="max-w-6xl mx-auto px-8">
-  <div class="pb-8 pt-12">
+<div class="max-w-[1200px] mx-auto px-8">
+
+  <div class="pb-14 pt-6">
+    <%= render Shared::Shop::RequestApptButton.new(shop: site.metadata.south) %>
+  </div>
+
+  <div class="pb-12 pt-2">
     <%= render Shared::Shop::Icons.new(shop: site.metadata.south, links: site.metadata.links) %>
   </div>
 
@@ -15,15 +25,15 @@ shop_location: south
 
 <%= render Shared::Shop::PhoneNumberBanner.new(shop: site.metadata.south) %>
 
-<div class="max-w-6xl mx-auto px-8 py-16">
+<div class="max-w-[1200px] mx-auto px-8 py-16">
   <%= render Shared::Shop::Hours.new(shop: site.metadata.south) %>
 </div>
 
-<div class="max-w-6xl mx-auto px-8">
-  <%= render Shared::Shop::ContactMap.new(metadata: site.metadata, shop: site.metadata.south) %>
-</div>
+<%= render Shared::Shop::ContactMap.new(metadata: site.metadata, shop: site.metadata.south) %>
 
 
-<div class="max-w-6xl mx-auto px-8 py-8 md:py-16">
-  <%= render Shared::Shop::Icons.new(shop: site.metadata.south, links: site.metadata.links, icons: true) %>
+<div class="max-w-[1200px] mx-auto px-8 py-8 md:py-16">
+  <div class="border-t border-bone pb-8 pt-12">
+    <%= render Shared::Shop::Icons.new(shop: site.metadata.south, links: site.metadata.links, icons: true) %>
+  </div>
 </div>

@@ -8,12 +8,13 @@ title: Iron Rite Tattoo
 tagline: Please walk-in and visit the shop for same day availability and schedule appointments with the artist that fits your needs.
 email: info@ironritetattoo.com
 description: >-
-  Iron Rite Tattoo is Central Texas' finest tattoo parlor, proudly serving our nation's military. Two locations, in Killeen and Georgetown, TX.
+  "Iron Rite Tattoo is Central Texas' finest tattoo parlor, proudly serving our nation's military. Two locations, in Killeen and Georgetown, TX."
 
 north:
   handle: "ironritetattoo"
   location: north
   city: "Killeen"
+  email: "info@ironritetattoo.com"
   map_link: "https://goo.gl/maps/b67h7eYEKXyZy2wRA"
   address: "1113 W. Veterans Memorial Blvd. A"
   street: "Killeen, TX 76541"
@@ -36,6 +37,7 @@ south:
   handle: "ironritetattoosouth"
   location: south
   city: "Georgetown"
+  email: "ironritetattoosouth@gmail.com"
   map_link: "https://goo.gl/maps/eLXXkgR5YEXViJxC6"
   address: "40120 Industrial Park Circle"
   street: "Georgetown, TX 78626"
@@ -49,8 +51,8 @@ south:
     sunday: "2-9pm"
     monday: "2-9pm"
     tuesday: "2-9pm"
-    wednesday: "Closed"
-    thursday: "Closed"
+    wednesday: "2-9pm"
+    thursday: "2-9pm"
     friday: "2-9pm"
     saturday: "2-9pm"
 
@@ -78,7 +80,11 @@ links:
   facebook: "https://facebook.com/ironritetattoo"
   ig_north: "https://instagram.com/ironritetattoo"
   ig_south: "https://instagram.com/ironritetattoosouth"
+  tiktok_north: "https://www.tiktok.com/@joshsnydertattoos"
+  tiktok_south: "https://www.tiktok.com/@ironritetattoosouth"
   youtube: "https://youtube.com/channel/UCMpg02LphjV3hEzaXKBJWMw/featured"
   merch: "https://ironritetattoo.bigcartel.com"
+  email_north: "info@ironritetattoo.com"
+  email_south: "ironritetattoosouth@gmail.com"
 
-we_are: "Central Texas' finest traditional tattoo parlor. Veteran owned and operated. Proudly serving our nations' military."
+we_are: "Central Texas’ finest traditional tattoo parlor. Veteran owned and operated. Proudly serving our nation’s military."

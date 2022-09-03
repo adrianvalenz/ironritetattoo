@@ -1,14 +1,16 @@
 ---
 layout: default
 ---
-<div class="max-w-6xl mx-auto px-8">
+<div class="max-w-[1200px] mx-auto px-8">
   <!-- Logo -->
   <div class="flex justify-center items-center py-20">
     <%= render Shared::IrtLogo.new %>
   </div>
 
   <!-- Header welcome text -->
-  <%= render Shared::HeaderText.new(text: site.metadata.we_are) %>
+  <div class="max-w-[1000px] mx-auto">
+    <%= render Shared::HeaderText.new(text: site.metadata.we_are) %>
+  </div>
 
   <!-- Shop Image and Buttons CTA -->
   <div class="grid grid-cols-1 md:grid-cols-2 gap-4 py-8">

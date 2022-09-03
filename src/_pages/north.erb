@@ -2,10 +2,15 @@
 layout: shop
 city_state: Killeen, TX
 shop_location: north
+number: "12548835304"
+map_pin: "https://goo.gl/maps/b67h7eYEKXyZy2wRA"
+ig_link: "https://instagram.com/ironritetattoo"
+tiktok: "https://www.tiktok.com/@joshsnydertattoos"
+tiktok_link: "https://www.tiktok.com/@joshsnydertattoos"
 ---
 
-<div class="max-w-6xl mx-auto px-8">
-  <div class="pb-8 pt-12">
+<div class="max-w-[1200px] mx-auto px-8">
+  <div class="pb-12 pt-2">
     <%= render Shared::Shop::Icons.new(shop: site.metadata.north, links: site.metadata.links) %>
   </div>
 
@@ -15,15 +20,13 @@ shop_location: north
 
 <%= render Shared::Shop::PhoneNumberBanner.new(shop: site.metadata.north) %>
 
-<div class="max-w-6xl mx-auto px-8 py-16">
+<div class="max-w-[1200px] mx-auto px-8 py-16">
   <%= render Shared::Shop::Hours.new(shop: site.metadata.north) %>
 </div>
 
-<div class="max-w-6xl mx-auto px-8">
-  <%= render Shared::Shop::ContactMap.new(metadata: site.metadata, shop: site.metadata.north) %>
-</div>
+<%= render Shared::Shop::ContactMap.new(metadata: site.metadata, shop: site.metadata.north) %>
 
-<div class="max-w-6xl mx-auto px-8 py-8 md:py-16">
+<div class="max-w-[1200px] mx-auto px-8 py-8 md:py-16">
   <div class="border-t border-bone pb-8 pt-12">
     <%= render Shared::Shop::Icons.new(shop: site.metadata.north, links: site.metadata.links, icons: true) %>
   </div>

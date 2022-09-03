@@ -2,10 +2,10 @@
 layout: default
 ---
 
-<div class="max-w-6xl mx-auto px-8">
+<div class="max-w-[1200px] mx-auto px-8">
   <%= render Shared::Navbar.new(metadata: site.metadata, resource: resource) %>
   <h3 class="uppercase text-center text-old-gold tracking-[10px] text-base py-4"><%= resource.data.city_state %></h3>
-  <div class="py-8">
+  <div class="pt-8 max-w-[1000px] mx-auto">
     <%= render Shared::HeaderText.new(text: site.metadata.we_are) %>
   </div>
 </div>
