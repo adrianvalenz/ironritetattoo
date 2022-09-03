@@ -24,7 +24,7 @@ layout: default
     </div>
   </div>
 
-  <%= render Shared::FontDisplay.new(text: "FAQs") %>
+  <%= render Shared::FontDisplay.new(text: "FAQs", styles: "py-4") %>
   <%= render Shared::Faq.new(metadata: site.metadata, resource: resource, faqs: site.metadata.faqs) %>
   
   <%= render Shared::Copyright.new(metadata: site.metadata, resource: resource) %>

@@ -19,7 +19,7 @@ tiktok_link: "https://www.tiktok.com/@ironritetattoosouth"
     <%= render Shared::Shop::Icons.new(shop: site.metadata.south, links: site.metadata.links) %>
   </div>
 
-  <%= render Shared::FontDisplay.new(text: "Photo Gallery") %>
+  <%= render Shared::FontDisplay.new(text: "Photo Gallery", styles: "md:py-10") %>
   <%= render Shared::Shop::PhotoGallery.new(ig_link: site.metadata.links.ig_south, shop: site.metadata.south) %>
 </div>
 
