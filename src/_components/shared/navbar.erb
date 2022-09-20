@@ -135,56 +135,56 @@
               x-transition.origin.top.left
               :id="$id('dropdown-button')"
               style="display: none;"
-              class="absolute z-40 -right-12 mt-8 w-screen bg-maxx-black text-white"
+              class="absolute z-40 -right-12 mt-8 pb-4 w-screen bg-maxx-black text-white"
               >
             <ul class="grid">
-              <li class="hover:bg-old-gold"><a class="inline-block w-full px-4" href="<%= relative_url '/' %>"><span class="border-b border-old-gold inline-block w-full px-2 py-4">Home</span></a></li>
-              <li class="hover:bg-old-gold"><a class="inline-block w-full px-4" href="<%= @metadata.links.facebook %>"><span class="border-b border-old-gold inline-block w-full px-2 py-4">Facebook</span></a></li>
+              <li class="hover:bg-old-gold"><a class="inline-block w-full px-4 text-bone" href="<%= relative_url '/' %>"><span class="border-b border-old-gold inline-block w-full px-2 py-4">Home</span></a></li>
+              <li class="hover:bg-old-gold"><a class="inline-block w-full px-4 text-bone" href="<%= @metadata.links.facebook %>"><span class="border-b border-old-gold inline-block w-full px-2 py-4">Facebook</span></a></li>
 
               <!-- Instagram links -->
               <% if @resource.data.layout == "shop" %>
-                <li class="hover:bg-old-gold"><a class="inline-block w-full px-4" href="<%= @resource.data.ig_link %>"><span class="border-b border-old-gold inline-block w-full px-2 py-4">Instagram</span></a></li>
+                <li class="hover:bg-old-gold"><a class="inline-block w-full px-4 text-bone" href="<%= @resource.data.ig_link %>"><span class="border-b border-old-gold inline-block w-full px-2 py-4">Instagram</span></a></li>
               <% end %>
 
               <% if @resource.data.layout != "shop" %>
                 <div x-data="{ open: false }">
                   <button x-on:click="open = ! open" class="inline-block w-full">
-                    <li class="hover:bg-old-gold"><a class="inline-block w-full px-4 focus:bg-old-gold" href="#"><span class="text-left border-b border-old-gold inline-block w-full px-2 py-4">Instagram</span></a></li>
+                    <li class="hover:bg-old-gold"><a class="inline-block w-full px-4 text-bone focus:bg-old-gold" href="#"><span class="text-left border-b border-old-gold inline-block w-full px-2 py-4">Instagram</span></a></li>
                   </button>
                   <div x-show="open">
-                    <li class="hover:bg-old-gold"><a class="inline-block w-full px-4 focus:bg-dark-ochre hover:bg-dark-ochre" href="<%= @metadata.links.ig_north %>"><span class="border-b border-old-gold inline-block w-full px-6 py-4">IG North</span></a></li>
-                    <li class="hover:bg-old-gold"><a class="inline-block w-full px-4 focus:bg-dark-ochre hover:bg-dark-ochre" href="<%= @metadata.links.ig_south %>"><span class="border-b border-old-gold inline-block w-full px-6 py-4">IG South</span></a></li>
+                    <li class="hover:bg-old-gold"><a class="inline-block w-full px-4 text-bone focus:bg-dark-ochre hover:bg-dark-ochre" href="<%= @metadata.links.ig_north %>"><span class="border-b border-old-gold inline-block w-full px-6 py-4">IG North</span></a></li>
+                    <li class="hover:bg-old-gold"><a class="inline-block w-full px-4 text-bone focus:bg-dark-ochre hover:bg-dark-ochre" href="<%= @metadata.links.ig_south %>"><span class="border-b border-old-gold inline-block w-full px-6 py-4">IG South</span></a></li>
                   </div>
                 </div>
               <% end %>
               <!-- end Instagram links -->
-              <li class="hover:bg-old-gold"><a class="inline-block w-full px-4" href="<%= @metadata.links.youtube %>"><span class="border-b border-old-gold inline-block w-full px-2 py-4">YouTube</span></a></li>
+              <li class="hover:bg-old-gold"><a class="inline-block w-full px-4 text-bone" href="<%= @metadata.links.youtube %>"><span class="border-b border-old-gold inline-block w-full px-2 py-4">YouTube</span></a></li>
               <!-- TikTok links -->
               <% if @resource.data.layout == "shop" %>
-                <li class="hover:bg-old-gold"><a class="inline-block w-full px-4" href="<%= @resource.data.tiktok_link %>"><span class="border-b border-old-gold inline-block w-full px-2 py-4">TikTok</span></a></li>
+                <li class="hover:bg-old-gold"><a class="inline-block w-full px-4 text-bone" href="<%= @resource.data.tiktok_link %>"><span class="border-b border-old-gold inline-block w-full px-2 py-4">TikTok</span></a></li>
               <% end %>
 
               <% if @resource.data.layout != "shop" %>
                 <div x-data="{ open: false }">
                   <button x-on:click="open = ! open" class="inline-block w-full">
-                    <li class="hover:bg-old-gold"><a class="inline-block w-full px-4 focus:bg-old-gold" href="#"><span class="text-left border-b border-old-gold inline-block w-full px-2 py-4">TikTok</span></a></li>
+                    <li class="hover:bg-old-gold"><a class="inline-block w-full px-4 text-bone focus:bg-old-gold" href="#"><span class="text-left border-b border-old-gold inline-block w-full px-2 py-4">TikTok</span></a></li>
                   </button>
                   <div x-show="open">
-                    <li class="hover:bg-old-gold"><a class="inline-block w-full px-4 focus:bg-dark-ochre hover:bg-dark-ochre" href="<%= @metadata.links.tiktok_north %>"><span class="border-b border-old-gold inline-block w-full px-6 py-4">TikTok North</span></a></li>
-                    <li class="hover:bg-old-gold"><a class="inline-block w-full px-4 focus:bg-dark-ochre hover:bg-dark-ochre" href="<%= @metadata.links.tiktok_south %>"><span class="border-b border-old-gold inline-block w-full px-6 py-4">TikTok South</span></a></li>
+                    <li class="hover:bg-old-gold"><a class="inline-block w-full px-4 text-bone focus:bg-dark-ochre hover:bg-dark-ochre" href="<%= @metadata.links.tiktok_north %>"><span class="border-b border-old-gold inline-block w-full px-6 py-4">TikTok North</span></a></li>
+                    <li class="hover:bg-old-gold"><a class="inline-block w-full px-4 text-bone focus:bg-dark-ochre hover:bg-dark-ochre" href="<%= @metadata.links.tiktok_south %>"><span class="border-b border-old-gold inline-block w-full px-6 py-4">TikTok South</span></a></li>
                   </div>
                 </div>
               <% end %>
               <!-- end TikTok links -->
-              <li class="hover:bg-old-gold"><a class="inline-block w-full px-4" href="<%= relative_url '/faq' %>"><span class="border-b border-old-gold inline-block w-full px-2 py-4">FAQs</span></a></li>
-              <li class="hover:bg-old-gold"><a class="inline-block w-full px-4" href="<%= @metadata.links.merch %>"><span class="border-b border-old-gold inline-block w-full px-2 py-4">Store</span></a></li>
+              <li class="hover:bg-old-gold"><a class="inline-block w-full px-4 text-bone" href="<%= relative_url '/faq' %>"><span class="border-b border-old-gold inline-block w-full px-2 py-4">FAQs</span></a></li>
+              <li class="hover:bg-old-gold"><a class="inline-block w-full px-4 text-bone" href="<%= @metadata.links.merch %>"><span class="inline-block w-full px-2 py-4">Store</span></a></li>
             </ul>
 
-            <nav class="p-4">
-              <a class="border border-old-gold p-4 text-center block w-full" href="<%= relative_url '/contact' %>">Call Us</a>
+            <nav class="px-4 py-3">
+              <a class="border border-old-gold p-4 text-center block w-full text-bone" href="<%= relative_url '/contact' %>">Call Us</a>
             </nav>
-            <nav class="p-4">
-              <a class="border border-old-gold p-4 text-center block w-full" href="<%= relative_url '/contact' %>">Find Us</a>
+            <nav class="px-4 py-3">
+              <a class="border border-old-gold p-4 text-center block w-full text-bone" href="<%= relative_url '/contact' %>">Find Us</a>
             </nav>
           </div><!-- x-ref="panel" -->
 
