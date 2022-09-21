@@ -11,4 +11,7 @@ layout: default
 </div>
 <%= yield %>
 
+<div class="max-w-[1200px] mx-auto px-8">
+  <%= render Shared::Copyright.new(metadata: site.metadata, resource: resource) %>
+</div>
 

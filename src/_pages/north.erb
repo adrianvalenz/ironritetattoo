@@ -10,7 +10,6 @@ tiktok_link: "https://www.tiktok.com/@joshsnydertattoos"
 ---
 
 <div class="max-w-[1200px] mx-auto px-8">
-
   <div class="pb-14 pt-6">
     <%= render Shared::Shop::RequestApptButton.new(shop: site.metadata.north) %>
   </div>
@@ -22,6 +21,7 @@ tiktok_link: "https://www.tiktok.com/@joshsnydertattoos"
   <%= render Shared::FontDisplay.new(text: "Photo Gallery", styles: "md:py-10") %>
   <%= render Shared::Shop::PhotoGallery.new(ig_link: site.metadata.links.ig_north, shop: site.metadata.north) %>
 </div>
+
 
 <%= render Shared::Shop::PhoneNumberBanner.new(shop: site.metadata.north) %>
 
@@ -36,3 +36,4 @@ tiktok_link: "https://www.tiktok.com/@joshsnydertattoos"
     <%= render Shared::Shop::Icons.new(shop: site.metadata.north, links: site.metadata.links, icons: true) %>
   </div>
 </div>
+

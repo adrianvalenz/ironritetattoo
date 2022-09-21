@@ -5,5 +5,5 @@ layout: page
 <%= render Shared::FontDisplay.new(text: "FAQs") %>
 <%= render Shared::Faq.new(metadata: site.metadata, resource: resource, faqs: site.metadata.faqs) %>
 
-<%= render Shared::FontDisplay.new(text: "Contact", styles: "py-4 mt-4") %>
+<%= render Shared::FontDisplay.new(text: "Contact", styles: "py-2 md:py-4 mt-4") %>
 <%= render Shared::ContactInfo.new(metadata: site.metadata, resource: resource) %>
