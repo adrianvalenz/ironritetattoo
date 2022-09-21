@@ -123,7 +123,10 @@
                 <span class="text-old-gold">Menu</span>
               </template>
               <template x-if="open">
-                <span class="text-old-gold">Close</span>
+                <div class="flex items-center justify-between">
+                  <div class="text-old-gold hidden"><a href="<%= relative_url '/' %>"><img src="<%= relative_url '/images/irt/logo-mark.svg' %>" alt="Logo" /></a></div>
+                  <div class="text-old-gold">Close</div>
+                </div>
               </template>
           </button>
           <!-- Overlay -->
