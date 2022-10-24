@@ -6,36 +6,39 @@
 
     <nav class="hidden lg:block space-x-4 text-base">
       <a href="<%= relative_url '/' %>">Home</a>
-      <a href="<%= @metadata.links.facebook %>">Facebook</a>
+      <a href="<%= @resource.data.facebook_link %>">Facebook</a>
 
       <!-- Instagram links -->
       <% if @resource.data.layout == "shop" %>
         <a href="<%= @resource.data.ig_link %>">Instagram</a>
       <% end %>
 
-      <% if @resource.data.layout != "shop" %>
-        <div x-data="{ open: false }" @mouseleave="open = false" class="inline-block relative">
-            <!-- Dropdown toggle button -->
-            <button @mouseover="open = true" class="py-2">
-                <span>Instagram</span>
-            </button>
+      <!-- Hide on FAQ and other standard pages -->
+      <div class="hidden">
+        <% if @resource.data.layout != "shop" %>
+          <div x-data="{ open: false }" @mouseleave="open = false" class="inline-block relative">
+              <!-- Dropdown toggle button -->
+              <button @mouseover="open = true" class="py-2">
+                  <span>Instagram</span>
+              </button>
 
-            <!-- Dropdown menu -->
-            <div x-show="open"
-            x-transition:enter.duration.500ms
-            x-transition:leave.duration.800ms
-            class="absolute left-0 w-48 p-4 mt-0 bg-maxx-black text-bone shadow-xl">
-                <a href="<%= @metadata.links.ig_north %>"
-                    class="block px-4 py-2 text-base text-bone hover:bg-old-gold hover:text-bone">
-                    North
-                </a>
-                <a href="<%= @metadata.links.ig_south %>"
-                    class="block px-4 py-2 text-base text-bone hover:bg-old-gold hover:text-bone">
-                    South
-                </a>
-            </div>
-        </div>
-      <% end %>
+              <!-- Dropdown menu -->
+              <div x-show="open"
+              x-transition:enter.duration.500ms
+              x-transition:leave.duration.800ms
+              class="absolute left-0 w-48 p-4 mt-0 bg-maxx-black text-bone shadow-xl">
+                  <a href="<%= @metadata.links.ig_north %>"
+                      class="block px-4 py-2 text-base text-bone hover:bg-old-gold hover:text-bone">
+                      North
+                  </a>
+                  <a href="<%= @metadata.links.ig_south %>"
+                      class="block px-4 py-2 text-base text-bone hover:bg-old-gold hover:text-bone">
+                      South
+                  </a>
+              </div>
+          </div>
+        <% end %>
+      </div>
       <!-- end Instagram links -->
       
       <a href="<%= @metadata.links.youtube %>">YouTube</a>
@@ -44,29 +47,32 @@
         <a href="<%= @resource.data.tiktok %>">TikTok</a>
       <% end %>
 
-      <% if @resource.data.layout != "shop" %>
-        <div x-data="{ open: false }" @mouseleave="open = false" class="inline-block relative">
-            <!-- Dropdown toggle button -->
-            <button @mouseover="open = true" class="py-2">
-                <span>TikTok</span>
-            </button>
+      <!-- hide on FAQ and other standard pages -->
+      <div class="hidden">
+        <% if @resource.data.layout != "shop" %>
+          <div x-data="{ open: false }" @mouseleave="open = false" class="inline-block relative">
+              <!-- Dropdown toggle button -->
+              <button @mouseover="open = true" class="py-2">
+                  <span>TikTok</span>
+              </button>
 
-            <!-- Dropdown menu -->
-            <div x-show="open"
-            x-transition:enter.duration.500ms
-            x-transition:leave.duration.800ms
-            class="absolute left-0 w-48 p-4 mt-0 bg-maxx-black text-bone shadow-xl">
-                <a href="<%= @metadata.links.tiktok_north %>"
-                    class="block px-4 py-2 text-base text-bone hover:bg-old-gold hover:text-bone">
-                    North
-                </a>
-                <a href="<%= @metadata.links.tiktok_south %>"
-                    class="block px-4 py-2 text-base text-bone hover:bg-old-gold hover:text-bone">
-                    South
-                </a>
-            </div>
-        </div>
-      <% end %>
+              <!-- Dropdown menu -->
+              <div x-show="open"
+              x-transition:enter.duration.500ms
+              x-transition:leave.duration.800ms
+              class="absolute left-0 w-48 p-4 mt-0 bg-maxx-black text-bone shadow-xl">
+                  <a href="<%= @metadata.links.tiktok_north %>"
+                      class="block px-4 py-2 text-base text-bone hover:bg-old-gold hover:text-bone">
+                      North
+                  </a>
+                  <a href="<%= @metadata.links.tiktok_south %>"
+                      class="block px-4 py-2 text-base text-bone hover:bg-old-gold hover:text-bone">
+                      South
+                  </a>
+              </div>
+          </div>
+        <% end %>
+      </div>
       <!-- end TikTok links -->
       <a href="<%= relative_url '/faq' %>">FAQs</a>
       <a href="<%= @metadata.links.merch %>">Store</a>
