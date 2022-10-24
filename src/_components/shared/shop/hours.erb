@@ -2,16 +2,6 @@
 
 <section class="flex flex-col md:flex-row justify-between">
   <% @shop.hours.each do |day, time| %>
-    <div class="flex lining-nums justify-between items-center border-b border-bone last-of-type:border-0 md:border-b-0 md:block text-center md:border-r md:pr-4 md:last-of-type:border-0">
-      <div class="py-4"><%= day.capitalize %></div>
-      <div class="py-4 text-2xl md:text-4xl"><%= time.upcase %></div>
-    </div>
-  <% end %>
-</section>
-<hr class="py-2">
-
-<section class="flex flex-col md:flex-row justify-between">
-  <% @shop.hours.each do |day, time| %>
     <div class="border-bone border-b md:border-b-0 last-of-type:border-b-0 py-4 md:border-l md:first-of-type:border-l-0 pl-8 first-of-type:pl-0">
       <div class="flex md:block justify-between items-center md:text-center md:px-4 md:first-of-type:pl-0 md:last-of-type:pr-0">
         <div class="py-2"><%= day.capitalize %></div>
