@@ -151,7 +151,7 @@
               >
             <ul class="grid">
               <li class="hover:bg-old-gold"><a class="inline-block w-full px-4 text-bone" href="<%= relative_url '/' %>"><span class="border-b border-old-gold inline-block w-full px-2 py-4">Home</span></a></li>
-              <li class="hover:bg-old-gold"><a class="inline-block w-full px-4 text-bone" href="<%= @metadata.links.facebook %>"><span class="border-b border-old-gold inline-block w-full px-2 py-4">Facebook</span></a></li>
+              <li class="hover:bg-old-gold"><a class="inline-block w-full px-4 text-bone" href="<%= @resource.data.facebook_link %>"><span class="border-b border-old-gold inline-block w-full px-2 py-4">Facebook</span></a></li>
 
               <!-- Instagram links -->
               <% if @resource.data.layout == "shop" %>
@@ -188,15 +188,15 @@
                 </div>
               <% end %>
               <!-- end TikTok links -->
-              <li class="hover:bg-old-gold"><a class="inline-block w-full px-4 text-bone" href="<%= relative_url '/faq' %>"><span class="border-b border-old-gold inline-block w-full px-2 py-4">FAQs</span></a></li>
+              <li class="hidden hover:bg-old-gold"><a class="inline-block w-full px-4 text-bone" href="<%= relative_url '/faq' %>"><span class="border-b border-old-gold inline-block w-full px-2 py-4">FAQs</span></a></li>
               <li class="hover:bg-old-gold"><a class="inline-block w-full px-4 text-bone" href="<%= @metadata.links.merch %>"><span class="inline-block w-full px-2 py-4">Store</span></a></li>
             </ul>
 
             <nav class="px-4 py-3">
-              <a class="border border-old-gold p-4 text-center block w-full text-bone" href="<%= relative_url '/contact' %>">Call Us</a>
+              <a class="border border-old-gold p-4 text-center block w-full text-bone" href="callto:+<%= @resource.data.number %>">Call Us</a>
             </nav>
             <nav class="px-4 py-3">
-              <a class="border border-old-gold p-4 text-center block w-full text-bone" href="<%= relative_url '/contact' %>">Find Us</a>
+              <a class="border border-old-gold p-4 text-center block w-full text-bone" href="<%= @resource.data.map_pin %>">Find Us</a>
             </nav>
           </div><!-- x-ref="panel" -->
 
