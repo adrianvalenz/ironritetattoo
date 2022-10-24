@@ -24,6 +24,7 @@ north:
   links: 
     ig: "https://instagram.com/ironritetattoo"
     tiktok: "https://www.tiktok.com/@joshsnydertattoos"
+    facebook: "https://facebook.com/ironritetattoo"
   hours:
     sunday: "2-9pm"
     monday: "2-9pm"
@@ -43,10 +44,12 @@ south:
   street: "Georgetown, TX 78626"
   number: "737.738.1852"
   phone: "(737) 738-1852"
-  number_link: "17377381852"
+  number_link: "+17377381852"
+  appointment_link: "https://www.ironritetattoosouthtx.com/?fbclid=PAAaZCIWGOpvYQfiGvPLotQ8xZPCM3LMZAFSTKVmRU8cquKedCcee7_pUPk9o"
   links:
     ig: "https://instagram.com/ironritetattoosouth"
     tiktok: "https://www.tiktok.com/@ironritetattoosouth"
+    facebook: "https://facebook.com/ironritetattoosouth"
   hours:
     sunday: "2-9pm"
     monday: "2-9pm"
