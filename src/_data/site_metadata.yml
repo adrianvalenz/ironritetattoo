@@ -11,6 +11,7 @@ description: >-
   "Iron Rite Tattoo is Central Texas' finest tattoo parlor, proudly serving our nation's military. Two locations, in Killeen and Georgetown, TX."
 
 north:
+  name: "north"
   handle: "ironritetattoo"
   location: north
   city: "Killeen"
@@ -35,6 +36,7 @@ north:
     saturday: "2-9pm"
 
 south:
+  name: "south"
   handle: "ironritetattoosouth"
   location: south
   city: "Georgetown"
