@@ -12,6 +12,8 @@ layout: default
 <%= yield %>
 
 <div class="max-w-[1200px] mx-auto px-8">
-  <%= render Shared::Copyright.new(metadata: site.metadata, resource: resource) %>
+  <div class="text-old-gold text-center grid md:flex md:flex-row-reverse md:justify-between pb-12 pt-2">
+    <%= render Shared::Copyright.new(metadata: site.metadata, resource: resource) %>
+  </div>
 </div>
 

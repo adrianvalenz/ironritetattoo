@@ -27,6 +27,8 @@ layout: default
   <%= render Shared::FontDisplay.new(text: "FAQs", styles: "pb-4 pt-12") %>
   <%= render Shared::Faq.new(metadata: site.metadata, resource: resource, faqs: site.metadata.faqs) %>
   
-  <%= render Shared::Copyright.new(metadata: site.metadata, resource: resource) %>
+  <div class="text-old-gold text-center grid md:flex md:flex-row-reverse md:justify-between py-12">
+    <%= render Shared::Copyright.new(metadata: site.metadata, resource: resource) %>
+  </div>
 </div>
 <%= yield %>

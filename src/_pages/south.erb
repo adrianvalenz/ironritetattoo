@@ -26,15 +26,15 @@ tiktok_link: "https://www.tiktok.com/@ironritetattoosouth"
 
 <%= render Shared::Shop::PhoneNumberBanner.new(shop: site.metadata.south) %>
 
-<div class="max-w-[1200px] mx-auto px-8 py-16">
+<div class="max-w-[1200px] mx-auto px-8 pt-16 pb-4">
   <%= render Shared::Shop::Hours.new(shop: site.metadata.south) %>
 </div>
 
 <%= render Shared::Shop::ContactMap.new(metadata: site.metadata, shop: site.metadata.south) %>
 
 
-<div class="max-w-[1200px] mx-auto px-8 py-8 md:py-16">
-  <div class="border-t border-bone pb-8 pt-12">
+<div class="max-w-[1200px] mx-auto px-8 py-2">
+  <div class="border-t border-bone pb-8 pt-6">
     <%= render Shared::Shop::Icons.new(shop: site.metadata.south, links: site.metadata.links, icons: true) %>
   </div>
 </div>

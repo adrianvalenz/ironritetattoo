@@ -6,6 +6,8 @@ layout: default
   <%= render Shared::Navbar.new(metadata: site.metadata, resource: resource) %>
   <%= yield %>
   <div class="md:py-12">
-    <%= render Shared::Copyright.new(metadata: site.metadata, resource: resource) %>
+    <div class="text-old-gold text-center grid md:flex md:flex-row-reverse md:justify-between py-12">
+      <%= render Shared::Copyright.new(metadata: site.metadata, resource: resource) %>
+    </div>
   </div>
 </div>
